@@ -1,0 +1,23 @@
+body * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* font-size: 10px; */
+}
+
+/* 헤더 */
+header {
+  height: 90px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* 바디 */
+.card {
+  background-color: black;
+  color: white;
+}
+
+.text_card {
+  background-color: #ff565c;
+  color: white;
+}
