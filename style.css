@@ -1,14 +1,39 @@
-body * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  /* font-size: 10px; */
+html {
+  font-size: 62.5%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  color: #1d1f24;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  appearance: none;
+}
 /* 헤더 */
 header {
   height: 90px;
+  width: 100%;
   border-bottom: 1px solid #ebebeb;
+  position: fixed;
+  background-color: white;
+}
+
+main {
+  padding-top: 90px;
+}
+nav > ul {
+  font-size: 1.4em;
 }
 
 /* 바디 */
@@ -16,8 +41,56 @@ header {
   background-color: black;
   color: white;
 }
+.card_btn {
+  background-color: #ff565c;
+  color: white;
+}
+
+.featured_card {
+  background-color: white;
+}
 
 .text_card {
   background-color: #ff565c;
   color: white;
 }
+.read_more {
+  background-color: #ff565c;
+  color: white;
+  border: 1px solid white;
+  width: 210px;
+  height: 60px;
+}
+
+.number {
+  color: #ababab;
+}
+
+/* 모바일 */
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 336px;
+
+    margin: 20px 0 20px 0;
+  }
+  .featured_card {
+    width: 336px;
+  }
+
+  .text_card {
+    width: 336px;
+  }
+  .main_txt {
+    font-size: 2.6rem;
+  }
+  .sub_txt {
+    font-size: 1.8rem;
+  }
+  .read_more {
+    font-size: 1.6rem;
+  }
+}
+/* 데스크탑 */
+
+/* 태블릿 */
