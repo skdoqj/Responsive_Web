@@ -7,6 +7,9 @@ body {
   padding: 0;
   color: #1d1f24;
 }
+ul {
+  padding: 0;
+}
 
 li {
   list-style: none;
@@ -22,37 +25,102 @@ button {
 }
 /* 헤더 */
 header {
-  height: 90px;
+  /* height: 90px; */
   width: 100%;
   border-bottom: 1px solid #ebebeb;
   position: fixed;
   background-color: white;
 }
 
-main {
-  padding-top: 90px;
-}
 nav > ul {
   font-size: 1.4em;
 }
 
 /* 바디 */
-.card {
+main {
+  background-color: #f2f2f2;
+}
+.card_img {
   background-color: black;
   color: white;
 }
-.card_btn {
+.tag_card {
   background-color: #ff565c;
   color: white;
+  height: 40px;
+  width: 107px;
+}
+.text_tag {
+  text-align: center;
+  font-size: 1.4rem;
+  padding-top: 12px;
+}
+
+.icons {
+  display: flex;
+  padding: 75px 0 10px 0;
+}
+.arrow,
+.eye,
+.talk,
+.icons .icon_number {
+  display: flex;
+}
+.icon_number {
+  padding: 5px 10px 0px 5px;
+}
+
+/* 메인카드 */
+.main_card {
+  text-align: center;
+}
+.main_card .tag_card {
+  margin: 0 auto;
+}
+.main_card .icons {
+  justify-content: center;
 }
 
 .featured_card {
   background-color: white;
 }
+.featured_card li {
+  margin-top: 20px;
+}
+.featured_card .title {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+.featured_card .number,
+.featured_card .featured_txt {
+  display: inline;
+  font-size: 1.8rem;
+}
 
+.featured_card .number {
+  color: #ababab;
+  padding-right: 15px;
+}
+
+.featured_card .line {
+  border: 1px solid #f2f3f6;
+  margin-top: 20px;
+}
+
+/* 텍스트카드 */
 .text_card {
   background-color: #ff565c;
   color: white;
+}
+.text_card .main_txt {
+  margin-top: 10px;
+  font-size: 2.6rem;
+}
+
+.text_card .sub_txt {
+  margin-top: 25px;
+  font-size: 1.8rem;
+  line-height: 3rem;
 }
 .read_more {
   background-color: #ff565c;
@@ -60,20 +128,60 @@ nav > ul {
   border: 1px solid white;
   width: 210px;
   height: 60px;
-}
-
-.number {
-  color: #ababab;
+  margin: 25px 0;
 }
 
 /* 모바일 */
 
 @media screen and (max-width: 576px) {
-  .card {
-    width: 336px;
-
-    margin: 20px 0 20px 0;
+  /* 헤더 */
+  header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .logo_header {
+    display: inline;
+    padding-left: 20px;
+  }
+  nav ul {
+    display: none;
+    position: fixed;
+  }
+
+  .hamberger {
+    padding-right: 20px;
+  }
+
+  /* 메인 */
+
+  main {
+    padding-top: 70px;
+    /* text-align: center; */
+
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 336px;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  .card .main_txt {
+    margin-top: 20px;
+  }
+  .main_card .sub_txt {
+    display: none;
+  }
+  .main_card .tag_card {
+    margin-top: 60px;
+  }
+
   .featured_card {
     width: 336px;
   }
