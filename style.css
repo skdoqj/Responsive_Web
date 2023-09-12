@@ -21,7 +21,14 @@ a:hover {
 }
 
 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+
+  border: none;
+  padding: 0;
+  background-color: white;
+  cursor: pointer;
 }
 /* 헤더 */
 header {
@@ -69,18 +76,6 @@ main {
   padding: 5px 10px 0px 5px;
 }
 
-/* 메인카드 */
-.main_card {
-  text-align: center;
-}
-.main_card .tag_card {
-  margin: 0 auto;
-}
-.main_card .icons {
-  justify-content: center;
-  padding: 75px 0 10px 0;
-}
-
 /* 이미지카드 */
 .card_img .main_txt {
   font-size: 2.4rem;
@@ -93,6 +88,19 @@ main {
 
 .card_img .icons {
   padding: 40px 0 10px 0;
+}
+
+/* 메인카드 */
+.main_card {
+  text-align: center;
+}
+.main_card .tag_card {
+  margin: 0 auto;
+  left: 0;
+}
+.main_card .icons {
+  justify-content: center;
+  padding: 75px 0 10px 0;
 }
 
 /* 기능카드 */
@@ -190,7 +198,8 @@ main {
   .main_card .main_txt {
     font-size: 2.6rem;
   }
-  .main_card .sub_txt {
+  .main_card .sub_txt,
+  .main_card .slide {
     display: none;
   }
   .main_card .tag_card {
@@ -213,7 +222,15 @@ main {
   .read_more {
     font-size: 1.6rem;
   }
+
+  /* 안보일 카드 */
+  .surb_card1,
+  .surb_card3,
+  .surb_card4 {
+    display: none;
+  }
 }
-/* 데스크탑 */
 
 /* 태블릿 */
+
+/* 데스크탑 */
