@@ -30,6 +30,15 @@ button {
   background-color: white;
   cursor: pointer;
 }
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+}
+
 /* 헤더 */
 header {
   width: 100%;
@@ -46,6 +55,7 @@ nav > ul {
 /* 바디 */
 main {
   background-color: #f2f2f2;
+  padding-bottom: 60px;
 }
 .card_img {
   background-color: black;
@@ -145,7 +155,7 @@ main {
   font-size: 1.8rem;
   line-height: 3rem;
 }
-.read_more {
+.btn_read_more {
   background-color: #ff565c;
   color: white;
   border: 1px solid white;
@@ -154,6 +164,59 @@ main {
   margin: 25px 0;
 }
 
+.btn_read_more:hover {
+  background-color: white;
+  color: #ff565c;
+}
+
+/* 푸터 */
+footer {
+  background-color: #1d1f24;
+  color: #ffff;
+}
+.brand {
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.form_subscribe {
+  display: flex;
+}
+.form_subscribe input {
+  height: 3.5rem;
+  border: none;
+  padding-left: 10px;
+}
+.btn_subscribe {
+  height: 3.5rem;
+  width: 12rem;
+  border: 1px solid #ff565c;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: #ff565c;
+  color: white;
+}
+.btn_subscribe:hover {
+  background-color: white;
+  color: #ff565c;
+}
+.social {
+  display: flex;
+  align-items: center;
+  width: 194px;
+}
+.txt_follow {
+  padding-right: 10px;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.social_icons img {
+  margin-right: 10px;
+}
+.footer_nav ul {
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: grid;
+}
 /* 모바일 */
 
 @media screen and (max-width: 576px) {
@@ -228,6 +291,22 @@ main {
   .surb_card3,
   .surb_card4 {
     display: none;
+  }
+
+  /* 푸터 */
+  footer {
+    padding: 40px 20px;
+  }
+  .form_subscribe {
+    margin-top: 20px;
+  }
+  .social {
+    margin-top: 20px;
+  }
+  .footer_nav ul {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
 
