@@ -249,7 +249,6 @@ nav ul {
 }
 .hamberger {
   padding-right: 20px;
-  background-color: #ff565c;
   width: 8rem;
   height: 7rem;
 }
@@ -343,6 +342,32 @@ footer {
     margin-top: 20px;
   }
 
+  .main_card .slide {
+    padding: 25px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 22%;
+    left: -5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .slide_box {
+    width: 5rem;
+    height: 5rem;
+    background-color: #1d1f24;
+    position: relative;
+  }
+  .slide_box .arrow {
+    margin: 0 auto;
+  }
+
+  .right_box {
+    right: -10px;
+  }
+  .right_arrow {
+    transform: rotate(180deg);
+  }
   .bottom_section {
     display: grid;
     grid-template-columns: repeat(2, auto);
