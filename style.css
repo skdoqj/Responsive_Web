@@ -1,3 +1,9 @@
+/* Root */
+:root {
+  --point-color: #ff565c;
+}
+
+/* reset */
 html {
   font-size: 62.5%;
 }
@@ -39,6 +45,13 @@ input {
   padding: 0;
 }
 
+.hidden_txt {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
 /* 헤더 */
 header {
   width: 100%;
@@ -62,7 +75,7 @@ main {
   color: white;
 }
 .tag_card {
-  background-color: #ff565c;
+  background-color: var(--point-color);
   color: white;
   height: 40px;
   width: 107px;
@@ -88,7 +101,6 @@ main {
 
 /* 이미지카드 */
 .card_img .main_txt {
-  font-size: 2.4rem;
   margin-top: 20px;
 }
 .card_img .tag_card {
@@ -142,7 +154,7 @@ main {
 
 /* 텍스트카드 */
 .text_card {
-  background-color: #ff565c;
+  background-color: var(--point-color);
   color: white;
 }
 .text_card .main_txt {
@@ -156,7 +168,7 @@ main {
   line-height: 3rem;
 }
 .btn_read_more {
-  background-color: #ff565c;
+  background-color: var(--point-color);
   color: white;
   border: 1px solid white;
   width: 210px;
@@ -166,7 +178,7 @@ main {
 
 .btn_read_more:hover {
   background-color: white;
-  color: #ff565c;
+  color: var(--point-color);
 }
 
 /* 푸터 */
@@ -189,15 +201,15 @@ footer {
 .btn_subscribe {
   height: 3.5rem;
   width: 12rem;
-  border: 1px solid #ff565c;
+  border: 1px solid var(--point-color);
   font-size: 1.2rem;
   font-weight: 400;
-  background-color: #ff565c;
+  background-color: var(--point-color);
   color: white;
 }
 .btn_subscribe:hover {
   background-color: white;
-  color: #ff565c;
+  color: var(--point-color);
 }
 .social {
   display: flex;
@@ -218,31 +230,117 @@ footer {
   display: grid;
 }
 
+/* 모바일 */
+/* @media screen and (max-width: 639px) { */
+/* 헤더 */
+header {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: none;
+  position: fixed;
+}
+.logo_header {
+  display: inline;
+  padding-left: 20px;
+}
+.hamberger {
+  padding-right: 20px;
+  background-color: #ff565c;
+  width: 8rem;
+  height: 7rem;
+}
+
+/* 메인 */
+main {
+  padding: 70px 20px 60px 20px;
+}
+.bottom_section {
+  display: block;
+}
+
+.card {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.main_card .main_txt {
+  font-size: 2.6rem;
+}
+.main_card .sub_txt,
+.main_card .slide {
+  display: none;
+}
+.main_card .tag_card {
+  margin-top: 60px;
+}
+
+.featured_card {
+  width: 336px;
+}
+
+.main_txt {
+  font-size: 2.6rem;
+}
+.sub_txt {
+  font-size: 1.8rem;
+}
+.read_more {
+  font-size: 1.6rem;
+}
+
+/* 안보일 카드 */
+.surb_card1,
+.surb_card3,
+.surb_card4 {
+  display: none;
+}
+
+/* 푸터 */
+footer {
+  padding: 40px 20px;
+}
+.form_subscribe {
+  margin-top: 20px;
+}
+.social {
+  margin-top: 20px;
+}
+.footer_nav ul {
+  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.middle_info {
+  display: block;
+}
+.social {
+  margin-left: 0;
+}
+/* } */
+
 /* 태블릿 */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   /* 헤더 */
   header {
     height: 9rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav ul {
-    display: none;
-    position: fixed;
-  }
-  .logo_header {
-    display: inline;
-    padding-left: 20px;
-  }
-
-  .hamberger {
-    padding-right: 20px;
   }
 
   /* 메인 */
   main {
     padding: 90px 20px 60px 20px;
+  }
+  .main_card .main_txt {
+    font-size: 3.2rem;
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 
   .bottom_section {
@@ -251,10 +349,15 @@ footer {
     gap: 20px;
   }
 
-  .card {
-    margin-top: 20px;
-    padding: 25px;
-    box-sizing: border-box;
+  .card_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .surb_card1,
+  .surb_card4 {
+    display: inherit;
   }
 
   .surb_card3 {
@@ -279,80 +382,6 @@ footer {
   }
 }
 
-/* 모바일 */
-@media screen and (max-width: 576px) {
-  /* 헤더 */
-  header {
-    height: 7rem;
-  }
-
-  /* 메인 */
-  main {
-    padding: 70px 20px 60px 20px;
-  }
-  .bottom_section {
-    display: block;
-  }
-
-  .card {
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .main_card .main_txt {
-    font-size: 2.6rem;
-  }
-  .main_card .sub_txt,
-  .main_card .slide {
-    display: none;
-  }
-  .main_card .tag_card {
-    margin-top: 60px;
-  }
-
-  .featured_card {
-    width: 336px;
-  }
-
-  .main_txt {
-    font-size: 2.6rem;
-  }
-  .sub_txt {
-    font-size: 1.8rem;
-  }
-  .read_more {
-    font-size: 1.6rem;
-  }
-
-  /* 안보일 카드 */
-  .surb_card1,
-  .surb_card3,
-  .surb_card4 {
-    display: none;
-  }
-
-  /* 푸터 */
-  footer {
-    padding: 40px 20px;
-  }
-  .form_subscribe {
-    margin-top: 20px;
-  }
-  .social {
-    margin-top: 20px;
-  }
-  .footer_nav ul {
-    margin-top: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .middle_info {
-    display: block;
-  }
-  .social {
-    margin-left: 0;
-  }
-}
-
 /* 데스크탑 */
+@media screen and (min-width: 1024px) {
+}
