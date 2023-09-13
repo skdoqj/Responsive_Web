@@ -366,19 +366,22 @@ footer {
 
   /* 푸터 */
   footer {
-    /* position: static; */
+    display: flex;
+    flex-wrap: wrap;
     padding: 40px 20px;
   }
   .middle_info {
     display: flex;
+    order: 3;
     margin-top: 20px;
   }
   .social {
     margin-left: 20px;
   }
-  .footer_nav {
-    position: relative;
-    bottom: -10px;
+  .footer_nav ul {
+    margin-left: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }
 
